@@ -1,0 +1,58 @@
+.loginBack{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: #7010AF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox{
+    background-color: white;    
+    position: absolute;
+    height: 80vh;
+    width: 60vw;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.419);
+    display: grid;
+    grid-template-columns: 53% 47%;
+}
+.leftimg{
+    background-image: url('D:\Web dev. Sharpner\REACT Files\Expense Tracker exercies\expense-traker-for-study\public\loginimg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.rightbox{
+    background-color: #ffffff;
+    padding: 12%;
+    display: grid;
+    grid-template-rows: 15% 8% 25% 25% 10% 10%;
+}
+.logo{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    color: rgb(105, 105, 105);
+}
+.hello{
+    background-color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: light;
+    font-size: 2.5vw;
+    color: #7010AF;
+}
+.welcome{
+    background-color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 3.5vw;
+    color: #7010AF;
+    padding: 0%;
+}
+.loginPassBox{
+    background-color: rgb(236, 175, 95);
+}
+.loginSigninBox{
+    background-color: rgb(255, 144, 0);
+}
+.haveAccount{
+    background-color: rgb(250, 164, 51);
+}
