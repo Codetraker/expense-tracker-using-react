@@ -1,0 +1,122 @@
+.loginBack{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: #7010AF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox{
+    background-color: white;    
+    position: absolute;
+    height: 80vh;
+    width: 60vw;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.419);
+    display: grid;
+    grid-template-columns: 53% 47%;
+}
+.leftimg{
+    background-image: url('D:\Web dev. Sharpner\REACT Files\Expense Tracker exercies\expense-traker-for-study\public\loginimg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.rightbox{
+    background-color: #ffffff;
+    padding: 12%;
+    display: grid;
+    grid-template-rows: 15% 10% 25% 25% 10% 15%;
+}
+.logo{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    color: rgb(105, 105, 105);
+}
+.hello{
+    background-color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: light;
+    font-size: 2.5vw;
+    color: #7010AF;
+}
+.welcome{
+    background-color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 3.5vw;
+    color: #7010AF;
+    padding: 0%;
+}
+.loginPassBox{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.emailBox{
+    background-color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    display: grid;
+    border: 1px solid rgba(105, 105, 105, 0.348);
+}
+.emailBox input{
+    padding: 0% 4% 0% 4%;
+    border: 0;
+    color: #7010AF;
+}
+.passwordBox{
+    background-color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    display: grid;
+    border-style: solid;
+    border-color: rgba(105, 105, 105, 0.348);
+    border-width: 0px 1px 1px 1px;
+}
+.passwordBox input{
+    padding: 0% 4% 0% 4%;
+    border: 0;
+    color: #7010AF;
+}
+
+.loginSigninBox{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.loginBtn{
+    height: 65%;
+    width: 30%;
+    border: 0;
+    background-color: #7010AF;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+.haveAccount{
+    background-color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: underline;
+    font-size: 1.6vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.haveAccount a{
+    color: #7010AF ;
+    font-weight: bold;
+}
+
+::placeholder{
+    opacity: .7;
+}
+input{
+    outline-color: #6f10af6f;
+}
+.loginBtn:hover{
+    background-color: #ffffff;
+    color: #7010AF;
+    border: 1px solid #7010AF;
+}
+.haveAccount:hover{
+    color: red;
+}
