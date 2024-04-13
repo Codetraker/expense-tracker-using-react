@@ -26,10 +26,12 @@ const AuthForm = () =>{
                             <div className='loginSigninBox'>
                                 <button className='loginBtn'>{haveAccount ? 'Login' : 'SignUp'}</button>
                             </div>
-                        
 
                         <div className='haveAccount' onClick={loginSignupHandler}>
                             {haveAccount?"Don't have an account? SignUp":"Have an account? LogIn"}
+                        </div>
+                        <div className='forgetPassword'>
+                            {haveAccount?<span>Forget Password</span>:""}
                         </div>
                     </div>
             </div>

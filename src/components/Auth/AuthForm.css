@@ -25,7 +25,7 @@
     background-color: #ffffff;
     padding: 12%;
     display: grid;
-    grid-template-rows: 15% 10% 25% 25% 10% 15%;
+    grid-template-rows: 15% 10% 25% 25% 10% 10%;
 }
 .logo{
     font-family: "Josefin Sans", sans-serif;
@@ -105,6 +105,15 @@
     color: #7010AF ;
     font-weight: bold;
 }
+.forgetPassword{
+    display: flex;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 68%;
+    color: #7010AF;
+    margin-top: 2%;
+    font-weight: bold;
+}
 
 ::placeholder{
     opacity: .7;
@@ -119,4 +128,7 @@ input{
 }
 .haveAccount:hover{
     color: red;
+}
+.forgetPassword:hover{
+    color: rgb(1, 192, 1);
 }

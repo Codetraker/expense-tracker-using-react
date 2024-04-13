@@ -1,0 +1,33 @@
+.nav{
+    background-color: #7010AF;
+    width: 100%;
+    height: 8vh;
+    color: white;
+    padding: 0 7% 0 7%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    position: fixed;
+}
+.nav h4{
+    display: grid;
+    align-self: center;
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 0.8%;
+}
+.navBtn{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+.navBtn button{
+    border: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #7010AF;
+    color: white;
+}
+.navBtn button:hover{
+    color: #dba5ff;
+}
