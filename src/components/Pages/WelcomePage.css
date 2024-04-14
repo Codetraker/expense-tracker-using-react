@@ -1,0 +1,81 @@
+.header{
+    background-color: #ffffff;
+    width: 100%;
+    height: 8vh;
+    color:  #7010AF;
+    padding: 0 7% 0 7%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+}
+.header h4{
+    align-self: center;
+    padding-top: 0.8%;
+}
+.header button{
+    border: 0;
+    width: 45%;
+    height: 60%;
+    justify-self: center;
+    align-self: center;
+    background-color: #ffffff;
+    color: #7010AF;
+}
+.header button:hover{
+    color: #55018d;
+    text-decoration: underline;
+}
+.contents{
+    background-color: aqua;
+}
+.line{
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    font-family: "Josefin Sans", sans-serif;
+    display: grid;
+    justify-content: center;
+}
+.line h2{
+    color: #7010AF;
+    font-size: 10vh;
+    align-self: end;
+    justify-self: center;
+}
+.line h1{
+    color: #7010AF;
+    font-size: 10vh;
+}
+.line span{
+    font-weight: 300;
+}
+.sgnbtn{
+    background-color: rgb(255, 255, 255);
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+.sgnbtn button{ 
+    height: 35%;
+    width: 20%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2vh;
+    background-color: #7010AF;
+    color: white;
+}
+.sgnbtn button:hover{
+    background-color: #ffffff;
+    color: #7010AF;
+    border: 2px solid #7010AF;
+}
+
+.navlink1{
+    color: #ffffff;
+    text-decoration: none;
+}
+.navlink1:hover{
+    color: #7010AF;
+}
