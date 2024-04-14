@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './AuthForm.css';
 const AuthForm = () =>{
     const [haveAccount, setHaveAccount] = useState(false);
+    const submitHandler = (event) =>{
+        event.preventDefault();
+    }
     const loginSignupHandler = () =>{
         setHaveAccount(!haveAccount)
     }
@@ -11,7 +14,7 @@ const AuthForm = () =>{
                     <div className='leftimg'></div>
                     <div className='rightbox'>
                         <div className='logo'>ExpenseTracker.in</div>
-                        <div className='hello'>{haveAccount ?'Hello,': 'Create an account,'}</div>
+                        <div className='hello'>{haveAccount ?'Hello,': "Create an account,"}</div>
                         <div className='welcome'>{haveAccount ? 'welcome!':'and Enjoy!'}</div>
 
                         {/* Add form */}
