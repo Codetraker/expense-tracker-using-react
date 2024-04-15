@@ -13,14 +13,10 @@ const AuthForm = () =>{
         const passwordEntered = passwordInputRef.current.value;
 
         setIsLoading(true);
-        let url;
         if(haveAccount){
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA8qtTJI1TZiZajaOt0D7WFDkZtrDcoSrM'
+
         }else{
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA8qtTJI1TZiZajaOt0D7WFDkZtrDcoSrM'
-        }
-        fetch(
-            url,
+            fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA8qtTJI1TZiZajaOt0D7WFDkZtrDcoSrM',
             {
                 method: 'POST',
                 body: JSON.stringify({
@@ -35,24 +31,19 @@ const AuthForm = () =>{
         ).then(res => {
             setIsLoading(false);
             if(res.ok){
-                return res.json();
+                
             }else{
                 res.json().then(data => {
                     let errorMessage = 'Authentication Failed!';
                     if(data && data.error && data.error.message){
                         errorMessage = data.error.message;
                     }
-                    // alert(errorMessage);
-                    throw new Error(errorMessage);
+                    alert(errorMessage);
                 });
             }
-        }).then(data => {
-            console.log(data);
-        }).catch(err =>{
-            alert(err.message);
         });
-    };
-
+        }
+    }
     const loginSignupHandler = () =>{
         setHaveAccount(!haveAccount)
     }
