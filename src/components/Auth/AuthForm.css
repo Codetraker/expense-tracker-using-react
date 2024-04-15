@@ -25,7 +25,7 @@
     background-color: #ffffff;
     padding: 12%;
     display: grid;
-    grid-template-rows: 15% 10% 25% 25% 10% 10%;
+    grid-template-rows: 15% 10% 25% 35% 10%;
 }
 .logo{
     font-family: "Josefin Sans", sans-serif;
@@ -50,7 +50,7 @@
 .loginPassBox{
     background-color: rgb(255, 255, 255);
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 35% 35% 30%;
 }
 .emailBox{
     background-color: rgb(255, 255, 255);
