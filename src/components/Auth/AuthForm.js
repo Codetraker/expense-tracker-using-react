@@ -5,12 +5,14 @@ const AuthForm = () =>{
     const passwordInputRef = useRef();
     
     const [haveAccount, setHaveAccount] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const submitHandler = (event) =>{
         event.preventDefault();
         const emailEntered = emailInputRef.current.value;
         const passwordEntered = passwordInputRef.current.value;
 
+        setIsLoading(true);
         if(haveAccount){
 
         }else{
@@ -27,11 +29,16 @@ const AuthForm = () =>{
                 }
             }
         ).then(res => {
+            setIsLoading(false);
             if(res.ok){
-
+                
             }else{
                 res.json().then(data => {
-                    console.log(data);
+                    let errorMessage = 'Authentication Failed!';
+                    if(data && data.error && data.error.message){
+                        errorMessage = data.error.message;
+                    }
+                    alert(errorMessage);
                 });
             }
         });
@@ -57,7 +64,8 @@ const AuthForm = () =>{
                                     <input type="password" className="password" id="password" placeholder="Enter Password" ref={passwordInputRef} required/>
                                 </div>
                                 <div className='loginSigninBox'>
-                                    <button className='loginBtn'>{haveAccount ? 'Login' : 'SignUp'}</button>
+                                    {!isLoading && <button className='loginBtn'>{haveAccount ? 'Login' : 'SignUp'}</button>}
+                                    {isLoading && <button className='loginBtn'>Loading...</button>}
                                 </div>
                         </form>
 
