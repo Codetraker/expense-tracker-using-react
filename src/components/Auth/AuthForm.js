@@ -1,8 +1,15 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext} from 'react';
 import './AuthForm.css';
+import AuthContex from '../../store/auth-context';
+import { useNavigate } from 'react-router-dom';
+
 const AuthForm = () =>{
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
+
+    const navigate = useNavigate();
+
+    const authCtx = useContext(AuthContex);
     
     const [haveAccount, setHaveAccount] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -13,10 +20,13 @@ const AuthForm = () =>{
         const passwordEntered = passwordInputRef.current.value;
 
         setIsLoading(true);
+        let url;
         if(haveAccount){
-
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA8qtTJI1TZiZajaOt0D7WFDkZtrDcoSrM';
         }else{
-            fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA8qtTJI1TZiZajaOt0D7WFDkZtrDcoSrM',
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA8qtTJI1TZiZajaOt0D7WFDkZtrDcoSrM';
+        }
+        fetch(url ,
             {
                 method: 'POST',
                 body: JSON.stringify({
@@ -31,19 +41,23 @@ const AuthForm = () =>{
         ).then(res => {
             setIsLoading(false);
             if(res.ok){
-                
+                return res.json();
             }else{
                 res.json().then(data => {
                     let errorMessage = 'Authentication Failed!';
-                    if(data && data.error && data.error.message){
-                        errorMessage = data.error.message;
-                    }
-                    alert(errorMessage);
+                    // if(data && data.error && data.error.message){
+                    //     errorMessage = data.error.message;
+                    // }
+                    throw new Error(errorMessage);
                 });
             }
+        }).then(data => {
+            authCtx.login(data.idToken);
+            navigate('/home');
+        }).catch(err => {
+            alert(err.message);
         });
-        }
-    }
+    };
     const loginSignupHandler = () =>{
         setHaveAccount(!haveAccount)
     }
